@@ -1,7 +1,14 @@
-import pygame
+import pygame, random
 from pygame.locals import*
+from virus import virus
+from doctor import doctor
+
+
 
 pygame.it()
+font = pygame.font.SysFont(None, 70)
+split_time = 1-
+
 size = (width, height) = (850,480)
 screen = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
@@ -9,11 +16,12 @@ color = (25,255,255)
 
 bacteria = pygame.sprite.Group()
 doctor = pygame.sprite.Group()
-
+def init():
+    for i in range(bac_num:
 def process_events():
     global check
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+       if event.type == pygame.QUIT:
             check = True
 
 
