@@ -17,8 +17,10 @@ color = (25,255,255)
 bacteria = pygame.sprite.Group()
 doctor = pygame.sprite.Group()
 def init():
-    for i in range(bac_num:
-def process_events():
+    for i in range(bac_num):
+        bacteria.add(Virus((random.randint(50, width-50), random.randint(50, height-50))
+    for i in range(doc_num):
+        doctors.add(doctor((random.randint(50, width - 50), random.randint(50, height - 50))))
     global check
     for event in pygame.event.get():
        if event.type == pygame.QUIT:
@@ -26,9 +28,20 @@ def process_events():
 
 
 def main():
+    init()
     while True:
         clock.tick(60)
         process_events()
+        if len(bacteria) > bac_num*split_time:
+            text = font.render("You were beaten", True, (255,0,0))
+            text.rect = text.get_rect()
+        elif len(bacteria) == 0:
+            text = font.render("You win!", True,(255,0,0)
+            text_rect = tet.get_rect()
+        elif:
+            doctor.update()
+            bacteria()
+            pygame.sprite.groupcollide(doctor, bacteria, fasle,True)
         screen.fill(color)
         doctor.draw(screen)
         bacteria.draw(screen)
