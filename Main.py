@@ -5,9 +5,11 @@ from doctor import doctor
 
 
 
-pygame.it()
+pygame.init()
 font = pygame.font.SysFont(None, 70)
-split_time = 1-
+split_time = 10
+doc_num = 100
+bac_num = 1000
 
 size = (width, height) = (850,480)
 screen = pygame.display.set_mode(size)
@@ -18,9 +20,9 @@ bacteria = pygame.sprite.Group()
 doctor = pygame.sprite.Group()
 def init():
     for i in range(bac_num):
-        bacteria.add(Virus((random.randint(50, width-50), random.randint(50, height-50))
+        bacteria.add(virus((random.randint(50, width-50), random.randint(50, height-50)), split_time))
     for i in range(doc_num):
-        doctors.add(doctor((random.randint(50, width - 50), random.randint(50, height - 50))))
+        doctor.add(doctor((random.randint(50, width - 50), random.randint(50, height - 50))))
     global check
     for event in pygame.event.get():
        if event.type == pygame.QUIT:
