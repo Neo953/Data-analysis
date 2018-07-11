@@ -1,10 +1,10 @@
 import pygame
-from pygame .locals import*
+from pygame.locals import*
 
 pygame.it()
 size = (width, height) = (850,480)
 screen = pygame.display.set_mode(size)
-clock = pygame.time.Clock()]
+clock = pygame.time.Clock()
 color = (25,255,255)
 
 bacteria = pygame.sprite.Group()
