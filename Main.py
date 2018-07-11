@@ -36,12 +36,14 @@ def main():
             text = font.render("You were beaten", True, (255,0,0))
             text.rect = text.get_rect()
         elif len(bacteria) == 0:
-            text = font.render("You win!", True,(255,0,0)
-            text_rect = tet.get_rect()
-        elif:
+            text = font.render("You win!", True,(255,0,0))
+            text_rect = text.get_rect()
+        else:
             doctor.update()
             bacteria()
-            pygame.sprite.groupcollide(doctor, bacteria, fasle,True)
+            pygame.sprite.groupcollide(doctor, bacteria, False ,True)
+            text = font.render("bacteria count: {}".format(len(bacteria)), True, (255,0,0))
+            text_rect = text.get_rect()
         screen.fill(color)
         doctor.draw(screen)
         bacteria.draw(screen)

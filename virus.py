@@ -1,6 +1,6 @@
 import pygame, random
 
-class VirusNode(pygame.sprite.Sprite):
+class virus(pygame.sprite.Sprite):
     def __init__(self, pos, split_time):
         super().__init__()
         self.image = pygame.image.load('virus.png')
