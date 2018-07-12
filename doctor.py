@@ -1,11 +1,11 @@
 import pygame, random
 
-class doctor(pygame.sprite.Sprite):
+class Doctor(pygame.sprite.Sprite):
 
     def __init__(self, pos):
         super().__init__()
         self.image = pygame.image.load('doctor.png')
-        self.image = pygame.trasnform.smoothscale(self.image, (30,30))
+        self.image = pygame.transform.smoothscale(self.image, (30,30))
         self.rect = self.image.get_rect()
         self.rect.center = pos
         self.speed = pygame.math.Vector2(0,5)
