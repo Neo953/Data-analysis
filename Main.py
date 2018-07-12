@@ -1,5 +1,7 @@
-import pygame, random
+import pygame
 from pygame.locals import*
+import random
+
 from virus import virus
 from doctor import doctor
 
@@ -28,6 +30,11 @@ def init():
        if event.type == pygame.QUIT:
             check = True
 
+def process_events():
+    global check
+    for event in pygame.get():
+        if event.type == pygame.QUIT:
+            check = True
 
 def main():
     init()
@@ -43,7 +50,7 @@ def main():
         else:
             doctor.update()
             bacteria()
-            pygame.sprite.groupcollide(doctor, bacteria, False ,True)
+            pygame.sprite.groupcollide(doctor, bacteria, False, True)
             text = font.render("bacteria count: {}".format(len(bacteria)), True, (255,0,0))
             text_rect = text.get_rect()
         screen.fill(color)
