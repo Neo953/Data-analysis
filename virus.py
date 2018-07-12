@@ -4,11 +4,11 @@ class virus(pygame.sprite.Sprite):
     def __init__(self, pos, split_time):
         super().__init__()
         self.image = pygame.image.load('virus.png')
-        self.image = pygame.trasnform.smoothscale(self.image, (30,30))
+        self.image = pygame.transform.smoothscale(self.image, (30,30))
         self.rect = self.image.get_rect()
         self.rect.center = pos
         self.speed = pygame.math.Vector2(0,5)
-        self.speed = rotate_ip(random.randint(0,360))
+        self.speed.rotate_ip(random.randint(0,360))
         self.time = 0
         self.split_time = split_time
 

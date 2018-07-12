@@ -9,7 +9,7 @@ class doctor(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = pos
         self.speed = pygame.math.Vector2(0,5)
-        self.speed = rotate_ip(random.randint(0,360))
+        self.speed.rotate_ip(random.randint(0,360))
 
     def update(self):
         self.rect.move_ip(self.speed)
